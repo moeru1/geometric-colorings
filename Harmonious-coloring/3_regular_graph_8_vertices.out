@@ -1,0 +1,24 @@
+Graph 1 
+h = 7
+1  2  3  4  4  5  6  7  
+diameter = 3
+
+Graph 2 
+h = 7
+1  2  3  4  5  6  2  7  
+diameter = 3
+
+Graph 3 
+h = 8
+1  2  3  4  5  6  7  8  
+diameter = 2
+
+Graph 4 
+h = 7
+1  2  3  4  4  5  6  7  
+diameter = 3
+
+Graph 5 
+h = 8
+1  2  3  4  5  6  7  8  
+diameter = 2
