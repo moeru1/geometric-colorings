@@ -6,10 +6,11 @@
 #include<cstring>
 #include <stdlib.h>
 #define N 50
+#define MAX_LINE 1024
 using namespace std;
 
 
-int n,max_current=N+1;
+int n,max_current=N+0;
 vector<int> adj[N];
 int colors[N]; //current partial coloring
 int x[N]; //current partial coloring, generated using backtracking
@@ -149,7 +150,7 @@ int a[N+1][N+1];
 
 void read_and_color_graphs(){
 	int x,y,no_graphs,i,j,v,u;
-	char graph_name[100],line[100],*p;
+	char graph_name[MAX_LINE],line[MAX_LINE],*p;
     f.open("harmonious_adj.in");
    	f>>n;
    	f>>no_graphs;
@@ -163,10 +164,10 @@ void read_and_color_graphs(){
    			adj[j].clear();
    			neighbours_color[j].clear();
    		}
-   		f.getline(graph_name,100);
+   		f.getline(graph_name,MAX_LINE);
    		h<<graph_name<<endl;
    		for(j=0;j<n;j++){
-   			f.getline(line,100);
+   			f.getline(line,MAX_LINE);
    			p=strtok(line," ");
    			v=atoi(p);
    			p=strtok(NULL," ");
