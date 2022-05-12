@@ -151,11 +151,11 @@ int a[N+1][N+1];
 void read_and_color_graphs(){
 	int x,y,no_graphs,i,j,v,u;
 	char graph_name[MAX_LINE],line[MAX_LINE],*p;
-    f.open("harmonious_adj.in");
+    f.open("harmonious_adj9.in");
    	f>>n;
    	f>>no_graphs;
    	f.get();
-    ofstream h("harmonious.out");
+    ofstream h("harmonious9.out");
    	
    	for(i=0;i<no_graphs;i++){
    		for(j=0;j<=n;j++){
