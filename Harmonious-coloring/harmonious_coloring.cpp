@@ -5,6 +5,7 @@
 #include<set>
 #include<cstring>
 #include <stdlib.h>
+#include <string>
 #define N 50
 #define MAX_LINE 1024
 using namespace std;
@@ -18,6 +19,9 @@ int min_colors[N]={N};//best coloring obtained
 
 
 ifstream f;
+string filein;
+string fileout;
+
 vector<int> neighbours_color[N]; //neighbour_colors[j] = list of the colors used for neighbors of color j 
 
 void back(int k);
@@ -133,7 +137,7 @@ void back(int k){
 }
 void read_graph(){
 	int x,y;
-    f.open("harmonious.in");
+    f.open(filein);
     
    	f>>n;
  
@@ -151,11 +155,11 @@ int a[N+1][N+1];
 void read_and_color_graphs(){
 	int x,y,no_graphs,i,j,v,u;
 	char graph_name[MAX_LINE],line[MAX_LINE],*p;
-    f.open("harmonious_adj9.in");
+    f.open(filein);
    	f>>n;
    	f>>no_graphs;
    	f.get();
-    ofstream h("harmonious9.out");
+    ofstream h(fileout);
    	
    	for(i=0;i<no_graphs;i++){
    		for(j=0;j<=n;j++){
@@ -187,8 +191,16 @@ void read_and_color_graphs(){
     f.close();
 }
     
-int main(){
-	ofstream h("harmonious.out");
+int main(int argc, char** argv){
+    if (argc < 3)
+    {
+        cerr << "format: ./harmonious.out <filein> <fileout>" << endl;
+        return 0;
+    }
+    filein = argv[1];
+    fileout = argv[2];
+
+	ofstream h(fileout);
 	cout<<"1. Harmonious chromatic number of a graph given by list of edges"<<endl;
 	cout<<"2. Harmonious chromatic number of a set of graphs given by adjacent list"<<endl;
 	cout<<"Your choice (1 or 2):";
