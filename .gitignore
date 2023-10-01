@@ -1,1 +1,5 @@
 *.ths
+src/otypes
+src/build
+src/__pycache__
+src/gcolorings/__pycache__

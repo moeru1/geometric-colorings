@@ -1,0 +1,13 @@
+setup.py
+gcolorings/asociadas.py
+gcolorings/criterios_ady.py
+gcolorings/files.py
+gcolorings/graph_utils.py
+gcolorings/graphics.py
+gcolorings/parse_files.py
+gcolorings/test.py
+gcolorings.egg-info/PKG-INFO
+gcolorings.egg-info/SOURCES.txt
+gcolorings.egg-info/dependency_links.txt
+gcolorings.egg-info/requires.txt
+gcolorings.egg-info/top_level.txt
