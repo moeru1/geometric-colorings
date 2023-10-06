@@ -1,0 +1,3 @@
+[submodule "harmonious-coloring"]
+	path = harmonious-coloring
+	url = https://github.com/moeru1/harmonious-coloring.git
